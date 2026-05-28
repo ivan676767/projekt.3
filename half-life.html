@@ -1,68 +1,467 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Half-Life</title>
+    <title>Half-Life | Valve Games</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .hl-hero {
+            height: 88vh;
+            background:
+                linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .88)),
+                url("images/hl-hero.jpg") center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .hl-hero-content h1 {
+            font-size: 5rem;
+            color: #ff8c1a;
+            margin-bottom: 20px;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .hl-hero-content p {
+            max-width: 900px;
+            margin: auto;
+            line-height: 1.9;
+            color: #ddd;
+            font-size: 1.2rem;
+        }
+
+        .hl-nav {
+            background: #131820;
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            padding: 28px 10%;
+        }
+
+        .hl-nav a {
+            text-decoration: none;
+            color: white;
+            background: #ff8c1a;
+            padding: 12px 22px;
+            border-radius: 12px;
+            transition: .3s;
+        }
+
+        .hl-nav a:hover {
+            transform: translateY(-3px);
+            background: #ffab52;
+        }
+
+        .section {
+            padding: 90px 10%;
+        }
+
+        .section h2 {
+            color: #ff8c1a;
+            font-size: 2.6rem;
+            margin-bottom: 25px;
+        }
+
+        .section p {
+            line-height: 1.9;
+            color: #d1d5db;
+            margin-bottom: 20px;
+        }
+
+        .incident-layout {
+            display: flex;
+            gap: 45px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .incident-text {
+            flex: 1;
+            min-width: 320px;
+        }
+
+        .incident-image {
+            flex: 1;
+            min-width: 320px;
+        }
+
+        .incident-image img {
+            border-radius: 22px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .5);
+            transition: .4s;
+        }
+
+        .incident-image img:hover {
+            transform: scale(1.03);
+        }
+
+        .xen-box {
+            background: rgba(22, 27, 34, .82);
+            border-left: 5px solid #ff8c1a;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+        }
+
+        .timeline {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .timeline-card {
+            background: rgba(20, 25, 35, .8);
+            border-radius: 20px;
+            padding: 30px;
+            transition: .4s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+        }
+
+        .timeline-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 15px 35px rgba(255, 140, 26, .25);
+        }
+
+        .timeline-card h3 {
+            color: #ff8c1a;
+            margin-bottom: 15px;
+        }
+
+        .gallery {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 35px;
+        }
+
+        .gallery img {
+            width: 350px;
+            border-radius: 20px;
+            transition: .4s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
+        }
+
+        .gallery img:hover {
+            transform: scale(1.04);
+        }
+
+        .characters {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .character-card {
+            width: 320px;
+            background: rgba(20, 25, 35, .85);
+            border-radius: 25px;
+            overflow: hidden;
+            transition: .4s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+        }
+
+        .character-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 140, 26, .35);
+        }
+
+        .character-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .character-info {
+            padding: 28px;
+        }
+
+        .character-info h3 {
+            color: #ff8c1a;
+            margin-bottom: 15px;
+        }
+
+        .facts {
+            background: rgba(22, 27, 34, .85);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+        }
+
+        .facts li {
+            margin-bottom: 15px;
+            color: #d1d5db;
+            line-height: 1.8;
+        }
+
+        .back-area {
+            text-align: center;
+            padding: 60px;
+        }
+    </style>
 </head>
 
 <body>
 
-<section class="game-page">
+    <!-- HERO -->
 
-    <h1>Half-Life</h1>
+    <section class="hl-hero">
 
-    <img src="images/half-lie.jpg" alt="Half-Life">
+        <div class="hl-hero-content">
 
-    <p>
-        Half-Life je legendární FPS hra vydaná společností Valve v roce 1998.
-        Hráč se ujímá role vědce Gordona Freemana, který pracuje v tajném
-        výzkumném komplexu Black Mesa.
-    </p>
+            <h1>Half-Life</h1>
 
-    <p>
-        Po nebezpečném experimentu dojde k katastrofě, která otevře portály
-        do mimozemského světa Xen. Gordon musí přežít útok mimozemšťanů
-        i vojenských jednotek.
-    </p>
+            <p>
+                Half-Life představuje jednu z nejvlivnějších FPS sérií historie.
+                Valve zde spojilo realistické prostředí,
+                napětí a revoluční způsob vyprávění příběhu.
+            </p>
 
-    <h2>Zajímavosti</h2>
+        </div>
+    </section>
 
-    <p>
-        Half-Life změnil historii videoher díky realistickému vyprávění příběhu.
-        Na rozdíl od jiných her nebyly použity klasické cutscény.
-        Celý příběh hráč prožívá přímo během hraní.
-    </p>
+    <!-- NAV -->
 
-    <p>
-        Hra získala více než 50 ocenění „Hra roku“
-        a dodnes je považována za jednu z nejlepších FPS her všech dob.
-    </p>
+    <div class="hl-nav">
 
-    <h2>Technologie</h2>
+        <a href="#incident">Black Mesa</a>
+        <a href="#xen">Xen</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#gallery">Galerie</a>
+        <a href="#characters">Postavy</a>
 
-    <p>
-        Valve použilo upravený GoldSrc engine založený na Quake enginu.
-        Díky tomu hra nabídla pokročilou fyziku,
-        AI nepřátel a realistickou atmosféru.
-    </p>
+    </div>
 
-    <h2>Half-Life 2</h2>
+    <!-- INCIDENT -->
 
-    <p>
-        Pokračování Half-Life 2 bylo vydáno v roce 2004
-        a představilo revoluční Source engine.
-        Hra se proslavila fyzikálním systémem a Gravity Gun zbraní.
-    </p>
+    <section class="section" id="incident">
 
-    <a href="index.html" class="back-btn">
-        Zpět na hlavní stránku
-    </a>
+        <div class="incident-layout">
 
-</section>
+            <div class="incident-text">
+
+                <h2>Black Mesa Incident</h2>
+
+                <p>
+                    Příběh Half-Life začíná ve výzkumném zařízení Black Mesa,
+                    kde fyzik Gordon Freeman provádí experiment s mimozemským materiálem.
+                </p>
+
+                <p>
+                    Experiment se však vymkne kontrole
+                    a otevře portály do světa Xen.
+                    Komplex zaplaví mimozemské formy života
+                    a později dorazí i vojenské jednotky HECU.
+                </p>
+
+                <p>
+                    Hráč tak musí přežít katastrofu,
+                    uniknout z laboratoří a odhalit pravdu.
+                </p>
+
+            </div>
+
+            <div class="incident-image">
+
+                <img src="images/half-life/blackmesa.jpg" alt="Black Mesa">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- XEN -->
+
+    <section class="section" id="xen">
+
+        <h2>Svět Xen</h2>
+
+        <div class="xen-box">
+
+            <p>
+                Xen je mimozemský svět propojený s Black Mesou.
+                Je tvořen plovoucími ostrovy,
+                podivnou biologií a nebezpečnými organismy.
+            </p>
+
+            <p>
+                Právě zde Gordon čelí největším hrozbám,
+                včetně Nihilantha,
+                který ovládá invazi mimozemšťanů.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- TIMELINE -->
+
+    <section class="section" id="timeline">
+
+        <h2>Vývoj Série</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-card">
+                <h3>Half-Life (1998)</h3>
+                <p>
+                    Originální hra,
+                    která redefinovala FPS žánr.
+                </p>
+            </div>
+
+            <div class="timeline-card">
+                <h3>Opposing Force (1999)</h3>
+                <p>
+                    Rozšíření sledující pohled vojáka Adriana Shepharda.
+                </p>
+            </div>
+
+            <div class="timeline-card">
+                <h3>Half-Life 2 (2004)</h3>
+                <p>
+                    Valve představilo Source engine
+                    a fyzikální revoluci pomocí Gravity Gun.
+                </p>
+            </div>
+
+            <div class="timeline-card">
+                <h3>Episode One & Two</h3>
+                <p>
+                    Pokračování příběhu Gordona a Alyx Vance
+                    v boji proti Combine.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GALLERY -->
+
+    <section class="section" id="gallery">
+
+        <h2>Half-Life Galerie</h2>
+
+        <div class="gallery">
+
+            <img src="images/half-life/hl-g1.webp" alt="Half Life">
+            <img src="images/half-life/hl-g2.jpg" alt="Xen">
+            <img src="images/half-life/hl-g3.jpg" alt="City 17">
+
+        </div>
+
+    </section>
+
+    <!-- CHARACTERS -->
+
+    <section class="section" id="characters">
+
+        <h2>Legendární Postavy</h2>
+
+        <div class="characters">
+
+            <div class="character-card">
+
+                <img src="images/half-life/gordon.jpeg" alt="Gordon Freeman">
+
+                <div class="character-info">
+
+                    <h3>Gordon Freeman</h3>
+
+                    <p>
+                        Vědec z Black Mesa
+                        a hlavní protagonista série.
+                        Je známý HEV oblekem
+                        a ikonickým crowbarem.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="character-card">
+
+                <img src="images/half-life/gman.png" alt="G-Man">
+
+                <div class="character-info">
+
+                    <h3>G-Man</h3>
+
+                    <p>
+                        Záhadná postava,
+                        která sleduje Gordona během celé série.
+                        Jeho skutečný původ zůstává neznámý.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="character-card">
+
+                <img src="images/half-life/alyx.webp" alt="Alyx">
+
+                <div class="character-info">
+
+                    <h3>Alyx Vance</h3>
+
+                    <p>
+                        Spojenkyně Gordona ve Half-Life 2.
+                        Patří mezi nejlépe napsané ženské postavy videoher.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FACTS -->
+
+    <section class="section">
+
+        <h2>Zajímavosti</h2>
+
+        <div class="facts">
+
+            <ul>
+
+                <li>Half-Life získal více než 50 ocenění Game of the Year.</li>
+
+                <li>Valve nepoužilo klasické cutscény — příběh probíhá během gameplaye.</li>
+
+                <li>Half-Life 2 se stal technologickou revolucí díky Source enginu.</li>
+
+                <li>Gordon Freeman nikdy během hry nemluví.</li>
+
+                <li>Série Half-Life výrazně ovlivnila moderní FPS design.</li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    <div class="back-area">
+
+        <a href="index.html" class="back-btn">
+            Zpět na hlavní stránku
+        </a>
+
+    </div>
 
 </body>
+
 </html>
