@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,179 +8,182 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
-<header>
+    <header>
 
-    <nav class="navbar">
+        <nav class="navbar">
 
-        <div class="logo">VALVE</div>
+            <div class="logo">VALVE</div>
 
-        <ul class="nav-links">
-            <li><a href="#about">O Valve</a></li>
-            <li><a href="#games">Hry</a></li>
-            <li><a href="#steam">Steam</a></li>
-            <li><a href="#footer">Kontakt</a></li>
-        </ul>
+            <ul class="nav-links">
+                <li><a href="#about">O Valve</a></li>
+                <li><a href="#games">Hry</a></li>
+                <li><a href="#steam">Steam</a></li>
+                <li><a href="#footer">Kontakt</a></li>
+            </ul>
 
-    </nav>
+        </nav>
 
-    <section class="hero">
+        <section class="hero">
 
-        <div class="overlay"></div>
+            <div class="overlay"></div>
 
-        <div class="hero-content">
+            <div class="hero-content">
 
-            <h1>Valve Corporation</h1>
+                <h1>Valve Corporation</h1>
+
+                <p>
+                    Legendární herní společnost, která změnila historii videoher.
+                </p>
+
+                <a href="#games" class="btn">Prozkoumat hry</a>
+
+            </div>
+
+        </section>
+
+    </header>
+
+    <section class="about" id="about">
+
+        <div class="about-text">
+
+            <h2>O společnosti Valve</h2>
 
             <p>
-                Legendární herní společnost, která změnila historii videoher.
+                Valve Corporation byla založena v roce 1996 Gabe Newellem a Mikem Harringtonem.
+                Společnost je známá díky ikonickým hrám jako Half-Life, Portal,
+                Counter-Strike a Dota 2.
             </p>
 
-            <a href="#games" class="btn">Prozkoumat hry</a>
+            <p>
+                Valve vytvořilo také platformu Steam, největší digitální obchod s videohrami.
+            </p>
+
+        </div>
+
+        <div class="about-image">
+            <img src="images/index/valve-about.jpg" alt="Valve">
+        </div>
+
+    </section>
+
+    <section class="games" id="games">
+
+        <h2>Nejslavnější hry Valve</h2>
+
+        <div class="games-grid">
+
+            <div class="card">
+
+                <img src="images/index/half-life.jpg" alt="Half Life">
+
+                <div class="card-content">
+
+                    <h3>Half-Life</h3>
+
+                    <p>
+                        Revoluční FPS hra, která změnila příběhové hry.
+                    </p>
+
+                    <a href="half-life.html">Více informací</a>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="images/index/portal2.jpg" alt="Portal 2">
+
+                <div class="card-content">
+
+                    <h3>Portal 2</h3>
+
+                    <p>
+                        Logická hra založená na fyzice a portálech.
+                    </p>
+
+                    <a href="portal2.html">Více informací</a>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="images/index/cs2.jpg" alt="CS2">
+
+                <div class="card-content">
+
+                    <h3>Counter-Strike 2</h3>
+
+                    <p>
+                        Jedna z největších kompetitivních FPS her na světě.
+                    </p>
+
+                    <a href="cs2.html">Více informací</a>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="images/index/dota2.jpg" alt="Dota 2">
+
+                <div class="card-content">
+
+                    <h3>Dota 2</h3>
+
+                    <p>
+                        Legendární MOBA hra s miliony aktivních hráčů.
+                    </p>
+
+                    <a href="dota2.html">Více informací</a>
+
+                </div>
+
+            </div>
 
         </div>
 
     </section>
 
-</header>
+    <section class="steam" id="steam">
 
-<section class="about" id="about">
+        <div class="steam-image">
+            <img src="images/index/steam.jpg" alt="Steam">
+        </div>
 
-    <div class="about-text">
+        <div class="steam-text">
 
-        <h2>O společnosti Valve</h2>
+            <h2>Steam Platforma</h2>
+
+            <p>
+                Steam je největší digitální platforma pro hry.
+                Nabízí tisíce her, achievementy, cloudové ukládání,
+                multiplayer a komunitní funkce.
+            </p>
+
+        </div>
+
+    </section>
+
+    <footer id="footer">
 
         <p>
-            Valve Corporation byla založena v roce 1996 Gabe Newellem a Mikem Harringtonem.
-            Společnost je známá díky ikonickým hrám jako Half-Life, Portal,
-            Counter-Strike a Dota 2.
+            Ivan Yemchenko | Valve Corporation Website
         </p>
 
-        <p>
-            Valve vytvořilo také platformu Steam, největší digitální obchod s videohrami.
-        </p>
-
-    </div>
-
-    <div class="about-image">
-        <img src="images/valve-about.jpg" alt="Valve">
-    </div>
-
-</section>
-
-<section class="games" id="games">
-
-    <h2>Nejslavnější hry Valve</h2>
-
-    <div class="games-grid">
-
-        <div class="card">
-
-            <img src="images/half-life.jpg" alt="Half Life">
-
-            <div class="card-content">
-
-                <h3>Half-Life</h3>
-
-                <p>
-                    Revoluční FPS hra, která změnila příběhové hry.
-                </p>
-
-                <a href="half-life.html">Více informací</a>
-
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <img src="images/portal2.jpg" alt="Portal 2">
-
-            <div class="card-content">
-
-                <h3>Portal 2</h3>
-
-                <p>
-                    Logická hra založená na fyzice a portálech.
-                </p>
-
-                <a href="portal2.html">Více informací</a>
-
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <img src="images/cs2.jpg" alt="CS2">
-
-            <div class="card-content">
-
-                <h3>Counter-Strike 2</h3>
-
-                <p>
-                    Jedna z největších kompetitivních FPS her na světě.
-                </p>
-
-                <a href="cs2.html">Více informací</a>
-
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <img src="images/dota2.jpg" alt="Dota 2">
-
-            <div class="card-content">
-
-                <h3>Dota 2</h3>
-
-                <p>
-                    Legendární MOBA hra s miliony aktivních hráčů.
-                </p>
-
-                <a href="dota2.html">Více informací</a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="steam" id="steam">
-
-    <div class="steam-image">
-        <img src="images/steam.jpg" alt="Steam">
-    </div>
-
-    <div class="steam-text">
-
-        <h2>Steam Platforma</h2>
-
-        <p>
-            Steam je největší digitální platforma pro hry.
-            Nabízí tisíce her, achievementy, cloudové ukládání,
-            multiplayer a komunitní funkce.
-        </p>
-
-    </div>
-
-</section>
-
-<footer id="footer">
-
-    <p>
-        Ivan Yemchenko | Valve Corporation Website
-    </p>
-
-</footer>
+    </footer>
 
 </body>
+
 </html>
