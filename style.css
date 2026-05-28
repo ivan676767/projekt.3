@@ -10,9 +10,12 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: #0d1117;
+    background:
+        radial-gradient(circle at top left, #1f2937, #0d1117 40%),
+        radial-gradient(circle at bottom right, #111827, #0d1117 35%);
     color: white;
-}
+    overflow-x: hidden;
+}   
 
 img {
     width: 100%;
@@ -151,7 +154,8 @@ img {
 }
 
 .card {
-    background: #161b22;
+    background: rgba(22, 27, 34, 0.75);
+    backdrop-filter: blur(12px);
     width: 300px;
     border-radius: 20px;
     overflow: hidden;
@@ -160,7 +164,8 @@ img {
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(255, 92, 0, 0.3);
 }
 
 .card-content {
@@ -269,4 +274,47 @@ footer {
     .steam h2 {
         font-size: 2rem;
     }
+}
+
+.card img,
+.about-image img,
+.steam-image img,
+.game-page img {
+    transition: 0.5s;
+}
+
+.card:hover img,
+.about-image:hover img,
+.steam-image:hover img,
+.game-page img:hover {
+    transform: scale(1.03);
+}
+
+.gallery {
+    margin-top: 60px;
+}
+
+.gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ff5c00;
+}
+
+.gallery-grid {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-grid img {
+    width: 350px;
+    border-radius: 20px;
+    transition: 0.4s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(255,92,0,0.4);
 }
