@@ -1,36 +1,404 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal 2</title>
+
+    <title>Portal 2 | Valve Games</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .portal-hero {
+            height: 85vh;
+            background:
+                linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .82)),
+                url("images/portal-hero.jpg") center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .portal-hero-content h1 {
+            font-size: 5rem;
+            color: #58c7ff;
+            margin-bottom: 20px;
+        }
+
+        .portal-hero-content p {
+            max-width: 850px;
+            margin: auto;
+            line-height: 1.9;
+            color: #d7eaf5;
+            font-size: 1.2rem;
+        }
+
+        .portal-nav {
+            background: #101820;
+            padding: 28px 10%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .portal-nav a {
+            text-decoration: none;
+            color: white;
+            background: #58c7ff;
+            padding: 12px 22px;
+            border-radius: 12px;
+            transition: .3s;
+        }
+
+        .portal-nav a:hover {
+            transform: translateY(-3px);
+            background: #7fd8ff;
+        }
+
+        .section {
+            padding: 90px 10%;
+        }
+
+        .section h2 {
+            color: #58c7ff;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+        }
+
+        .section p {
+            color: #d0d7de;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .aperture-layout {
+            display: flex;
+            gap: 45px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .aperture-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .aperture-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .aperture-image img {
+            border-radius: 22px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .5);
+            transition: .4s;
+        }
+
+        .aperture-image img:hover {
+            transform: scale(1.03);
+        }
+
+        .portal-box {
+            background: rgba(25, 35, 45, .75);
+            backdrop-filter: blur(12px);
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
+        }
+
+        .gallery {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 35px;
+        }
+
+        .gallery img {
+            width: 350px;
+            border-radius: 20px;
+            transition: .4s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+        }
+
+        .gallery img:hover {
+            transform: scale(1.04);
+        }
+
+        .characters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .character-card {
+            width: 320px;
+            background: rgba(18, 22, 30, .82);
+            border-radius: 25px;
+            overflow: hidden;
+            transition: .4s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
+        }
+
+        .character-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(88, 199, 255, .35);
+        }
+
+        .character-card img {
+            height: 230px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .character-info {
+            padding: 28px;
+        }
+
+        .character-info h3 {
+            color: #58c7ff;
+            margin-bottom: 15px;
+        }
+
+        .character-info p {
+            font-size: .95rem;
+        }
+
+        .facts-list {
+            margin-top: 20px;
+        }
+
+        .facts-list li {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #d0d7de;
+        }
+
+        .back-area {
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
 </head>
 
 <body>
 
-<section class="game-page">
+    <!-- HERO -->
 
-    <h1>Portal 2</h1>
+    <section class="portal-hero">
 
-    <img src="images/portal2.jpg" alt="Portal 2">
+        <div class="portal-hero-content">
 
-    <p>
-        Portal 2 je logická hra založená na vytváření portálů.
-        Hra kombinuje fyziku, humor a originální design úrovní.
-    </p>
+            <h1>Portal 2</h1>
 
-    <p>
-        Portal 2 získal mnoho ocenění za svou atmosféru,
-        soundtrack a jedinečný gameplay.
-    </p>
+            <p>
+                Portal 2 představuje unikátní kombinaci logických hádanek,
+                humoru a futuristické atmosféry společnosti Aperture Science.
+                Hra od Valve se stala jedním z nejlépe hodnocených titulů historie.
+            </p>
 
-    <a href="index.html" class="back-btn">
-        Zpět na hlavní stránku
-    </a>
+        </div>
+    </section>
 
-</section>
+    <!-- NAV -->
+
+    <div class="portal-nav">
+
+        <a href="#aperture">Aperture Science</a>
+        <a href="#gameplay">Gameplay</a>
+        <a href="#gallery">Galerie</a>
+        <a href="#characters">Postavy</a>
+        <a href="#facts">Zajímavosti</a>
+
+    </div>
+
+    <!-- APERTURE -->
+
+    <section class="section" id="aperture">
+
+        <div class="aperture-layout">
+
+            <div class="aperture-text">
+
+                <h2>Aperture Science</h2>
+
+                <p>
+                    Aperture Science je futuristická výzkumná laboratoř,
+                    kde probíhají nebezpečné vědecké experimenty.
+                    Společnost založil excentrický vědec Cave Johnson.
+                </p>
+
+                <p>
+                    Podzemní komplex obsahuje stovky testovacích komor,
+                    robotické systémy a pokročilé technologie.
+                    Právě zde se odehrává celý příběh Portal 2.
+                </p>
+
+                <p>
+                    Laboratoře působí zároveň fascinujícím i opuštěným dojmem,
+                    což vytváří ikonickou atmosféru hry.
+                </p>
+
+            </div>
+
+            <div class="aperture-image">
+
+                <img src="images/portal2/aperture.png" alt="Aperture Science">
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GAMEPLAY -->
+
+    <section class="section" id="gameplay">
+
+        <h2>Portal Gun & Gameplay</h2>
+
+        <div class="portal-box">
+
+            <p>
+                Hlavním nástrojem hry je Aperture Science Handheld Portal Device,
+                známý jako Portal Gun.
+            </p>
+
+            <p>
+                Zařízení umožňuje vytvářet dva propojené portály,
+                které mění pohyb hráče a fyziku prostoru.
+            </p>
+
+            <p>
+                Portal 2 kombinuje logické hádanky,
+                fyzikální mechaniky a přesné načasování.
+                Hráč musí využívat portály,
+                lasery, gelové povrchy a pohyblivé platformy.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- GALERIE -->
+
+    <section class="section" id="gallery">
+
+        <h2>Portal 2 Galerie</h2>
+
+        <div class="gallery">
+
+            <img src="images/portal2/p2-g1.webp" alt="Portal chamber">
+            <img src="images/portal2/p2-g2.jpeg" alt="Portal Gun">
+            <img src="images/portal2/p2-g3.jpg" alt="Aperture">
+
+        </div>
+
+    </section>
+
+    <!-- CHARACTERS -->
+
+    <section class="section" id="characters">
+
+        <h2>Nejdůležitější Postavy</h2>
+
+        <div class="characters">
+
+            <div class="character-card">
+
+                <img src="images/portal2/glados.jpg" alt="GLaDOS">
+
+                <div class="character-info">
+
+                    <h3>GLaDOS</h3>
+
+                    <p>
+                        GLaDOS je umělá inteligence Aperture Science.
+                        Je známá svým sarkasmem,
+                        temným humorem a nebezpečnými experimenty.
+                        Patří mezi nejslavnější herní antagonisty.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="character-card">
+
+                <img src="images/portal2/chell.webp" alt="Chell">
+
+                <div class="character-info">
+
+                    <h3>Chell</h3>
+
+                    <p>
+                        Chell je hlavní protagonistka série Portal.
+                        Nemluví, ale její inteligence a schopnost řešit testy
+                        ji činí jednou z nejzajímavějších herních postav.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="character-card">
+
+                <img src="images/portal2/wheatley.webp" alt="Wheatley">
+
+                <div class="character-info">
+
+                    <h3>Wheatley</h3>
+
+                    <p>
+                        Wheatley je robotický personality core,
+                        který hráče doprovází během hry.
+                        Je komický, chaotický a stal se oblíbenou postavou fanoušků.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FACTS -->
+
+    <section class="section" id="facts">
+
+        <h2>Zajímavosti</h2>
+
+        <div class="portal-box">
+
+            <ul class="facts-list">
+
+                <li>Portal 2 získal desítky ocenění Game of the Year.</li>
+
+                <li>Hra obsahuje samostatný co-op režim pro dva hráče.</li>
+
+                <li>GLaDOS byla často zařazována mezi nejlepší videoherní postavy historie.</li>
+
+                <li>Portal 2 je známý svým originálním soundtrackem a humorem.</li>
+
+                <li>Mnoho hráčů považuje Portal 2 za jednu z nejlepších puzzle her všech dob.</li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    <div class="back-area">
+
+        <a href="index.html" class="back-btn">
+            Zpět na hlavní stránku
+        </a>
+
+    </div>
 
 </body>
+
 </html>
