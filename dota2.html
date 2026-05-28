@@ -3,34 +3,375 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dota 2</title>
+
+    <title>Dota 2 | Valve Games</title>
 
     <link rel="stylesheet" href="style.css">
-</head>
 
+    <style>
+
+        .dota-hero {
+            height: 85vh;
+            background:
+            linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.85)),
+            url("images/dota-hero.jpg") center/cover;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            padding:40px;
+        }
+
+        .dota-hero-content h1{
+            font-size:5rem;
+            color:#d4352b;
+            margin-bottom:20px;
+        }
+
+        .dota-hero-content p{
+            max-width:850px;
+            margin:auto;
+            color:#ddd;
+            line-height:1.9;
+            font-size:1.2rem;
+        }
+
+        .quick-nav{
+            padding:30px 10%;
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            flex-wrap:wrap;
+            background:#111827;
+        }
+
+        .quick-nav a{
+            text-decoration:none;
+            background:#d4352b;
+            color:white;
+            padding:12px 22px;
+            border-radius:12px;
+            transition:.3s;
+        }
+
+        .quick-nav a:hover{
+            background:#ef4b3f;
+            transform:translateY(-3px);
+        }
+
+        .section{
+            padding:90px 10%;
+        }
+
+        .section h2{
+            color:#d4352b;
+            font-size:2.5rem;
+            margin-bottom:25px;
+        }
+
+        .section p{
+            line-height:1.9;
+            color:#d1d5db;
+            margin-bottom:20px;
+        }
+
+        .story-layout{
+            display:flex;
+            gap:45px;
+            align-items:center;
+            flex-wrap:wrap;
+        }
+
+        .story-text{
+            flex:1;
+            min-width:300px;
+        }
+
+        .story-image{
+            flex:1;
+            min-width:300px;
+        }
+
+        .story-image img{
+            border-radius:22px;
+            box-shadow:0 15px 40px rgba(0,0,0,.5);
+            transition:.4s;
+        }
+
+        .story-image img:hover{
+            transform:scale(1.03);
+        }
+
+        .international-box{
+            background:rgba(25,25,30,.75);
+            backdrop-filter:blur(10px);
+            border-radius:25px;
+            padding:40px;
+            box-shadow:0 10px 30px rgba(0,0,0,.45);
+        }
+
+        .gallery{
+            display:flex;
+            gap:25px;
+            flex-wrap:wrap;
+            justify-content:center;
+            margin-top:35px;
+        }
+
+        .gallery img{
+            width:350px;
+            border-radius:20px;
+            transition:.4s;
+            box-shadow:0 10px 30px rgba(0,0,0,.4);
+        }
+
+        .gallery img:hover{
+            transform:scale(1.04);
+        }
+
+        .heroes-grid{
+            display:flex;
+            gap:30px;
+            flex-wrap:wrap;
+            justify-content:center;
+            margin-top:40px;
+        }
+
+        .hero-card{
+            width:320px;
+            background:rgba(22,27,34,.82);
+            border-radius:25px;
+            overflow:hidden;
+            box-shadow:0 10px 30px rgba(0,0,0,.45);
+            transition:.4s;
+        }
+
+        .hero-card:hover{
+            transform:translateY(-10px);
+            box-shadow:0 20px 40px rgba(212,53,43,.35);
+        }
+
+        .hero-card img{
+            height:230px;
+            object-fit:cover;
+        }
+
+        .hero-info{
+            padding:28px;
+        }
+
+        .hero-info h3{
+            color:#d4352b;
+            margin-bottom:15px;
+        }
+
+        .hero-info p{
+            font-size:.95rem;
+            line-height:1.8;
+        }
+
+        .back-area{
+            text-align:center;
+            padding:50px;
+        }
+
+    </style>
+
+</head>
 <body>
 
-<section class="game-page">
+<!-- HERO -->
 
-    <h1>Dota 2</h1>
+<section class="dota-hero">
 
-    <img src="images/dota2.jpg" alt="Dota 2">
+    <div class="dota-hero-content">
+
+        <h1>Dota 2</h1>
+
+        <p>
+            Dota 2 je jedna z největších a nejkomplexnějších multiplayerových her na světě.
+            Spojuje strategii, týmovou spolupráci a unikátní hrdiny do intenzivních zápasů 5 proti 5.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- QUICK NAV -->
+
+<div class="quick-nav">
+
+    <a href="#about">O hře</a>
+    <a href="#international">The International</a>
+    <a href="#gallery">Galerie</a>
+    <a href="#heroes">Legendární hrdinové</a>
+
+</div>
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+    <div class="story-layout">
+
+        <div class="story-text">
+
+            <h2>O hře</h2>
+
+            <p>
+                Dota 2 byla vydána společností Valve v roce 2013
+                jako moderní pokračování slavné Warcraft III modifikace Defense of the Ancients.
+            </p>
+
+            <p>
+                Dva týmy po pěti hráčích bojují o zničení nepřátelského Ancientu.
+                Každý hráč ovládá unikátního hrdinu s odlišnými schopnostmi.
+            </p>
+
+            <p>
+                Dota 2 je známá svou vysokou obtížností,
+                obrovskou hloubkou strategie a tisíci možných kombinací.
+            </p>
+
+        </div>
+
+        <div class="story-image">
+
+            <img src="images/dota2/dota2.jpg" alt="Dota gameplay">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TI -->
+
+<section class="section" id="international">
+
+    <h2>The International</h2>
+
+    <div class="international-box">
+
+        <p>
+            The International představuje nejprestižnější turnaj Dota 2.
+            Každoročně se zde utkávají nejlepší týmy planety.
+        </p>
+
+        <p>
+            Turnaj je známý rekordními prize pooly,
+            které v některých letech překročily 40 milionů dolarů.
+        </p>
+
+        <p>
+            Miliony fanoušků sledují zápasy online i na stadionech,
+            což dělá z Dota 2 jeden z největších esport titulů historie.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- GALERIE -->
+
+<section class="section" id="gallery">
+
+    <h2>Dota 2 Galerie</h2>
+
+    <div class="gallery">
+
+        <img src="images/dota2/dota-g1.webp" alt="Dota Arena">
+        <img src="images/dota2/dota-g2.jpg" alt="Battle">
+        <img src="images/dota2/dota-g3.jpg" alt="The International">
+
+    </div>
+
+</section>
+
+<!-- HEROES -->
+
+<section class="section" id="heroes">
+
+    <h2>Legendární Hrdinové</h2>
 
     <p>
-        Dota 2 je jedna z největších MOBA her na světě.
-        Hráči bojují v týmech 5 proti 5 a využívají unikátní schopnosti hrdinů.
+        Dota 2 obsahuje více než 120 hrdinů.
+        Někteří se však stali ikonami celé hry.
     </p>
 
-    <p>
-        Hra má obrovskou esport scénu a turnaj The International,
-        který nabízí milionové prize pooly.
-    </p>
+    <div class="heroes-grid">
+
+        <!-- INVOKER -->
+
+        <div class="hero-card">
+
+            <img src="images/dota2/invoker.jpg" alt="Invoker">
+
+            <div class="hero-info">
+
+                <h3>Invoker</h3>
+
+                <p>
+                    Invoker je jeden z nejsložitějších hrdinů hry.
+                    Kombinuje kouzla pomocí Quas, Wex a Exort
+                    a dokáže používat až 10 různých spellů.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- PUDGE -->
+
+        <div class="hero-card">
+
+            <img src="images/dota2/pudge.png" alt="Pudge">
+
+            <div class="hero-info">
+
+                <h3>Pudge</h3>
+
+                <p>
+                    Pudge patří mezi nejikoničtější postavy Dota 2.
+                    Je známý schopností Meat Hook,
+                    která dokáže přitáhnout protivníka z velké vzdálenosti.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- JUGGERNAUT -->
+
+        <div class="hero-card">
+
+            <img src="images/dota2/juggernaut.jpg" alt="Juggernaut">
+
+            <div class="hero-info">
+
+                <h3>Juggernaut</h3>
+
+                <p>
+                    Juggernaut je populární carry hrdina.
+                    Díky Blade Fury a Omnislash dokáže rychle eliminovat soupeře
+                    a je oblíbený mezi začátečníky i profesionály.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="back-area">
 
     <a href="index.html" class="back-btn">
         Zpět na hlavní stránku
     </a>
 
-</section>
+</div>
 
 </body>
 </html>
